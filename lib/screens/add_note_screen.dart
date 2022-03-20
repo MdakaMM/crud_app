@@ -138,7 +138,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                         Text(titleText,
                             style: const TextStyle(
                                 color: Colors.white,
-                                fontSize: 40.0,
+                                fontSize: 30.0,
                                 fontWeight: FontWeight.bold)),
                         const SizedBox(height: 10.0),
                         Form(
@@ -148,11 +148,13 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                                   padding: const EdgeInsets.symmetric(
                                       vertical: 20.0),
                                   child: TextFormField(
-                                    style: const TextStyle(fontSize: 18.0),
+                                    style: const TextStyle(
+                                        fontSize: 18.0, color: Colors.white),
                                     decoration: InputDecoration(
                                         labelText: 'Title',
-                                        labelStyle:
-                                            const TextStyle(fontSize: 18.0),
+                                        labelStyle: const TextStyle(
+                                            fontSize: 18.0,
+                                            color: Colors.white),
                                         border: OutlineInputBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10.0))),
@@ -168,7 +170,8 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                                   child: TextFormField(
                                       readOnly: true,
                                       controller: _dateController,
-                                      style: const TextStyle(fontSize: 18.0),
+                                      style: const TextStyle(
+                                          fontSize: 18.0, color: Colors.white),
                                       onTap: _handleDatePicker,
                                       decoration: InputDecoration(
                                           labelText: 'Date',
@@ -183,7 +186,8 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                                       vertical: 20.0),
                                   child: DropdownButtonFormField(
                                     isDense: true,
-                                    icon: Icon(Icons.arrow_drop_down_circle),
+                                    icon: const Icon(
+                                        Icons.arrow_drop_down_circle),
                                     iconSize: 22.0,
                                     iconEnabledColor:
                                         Theme.of(context).primaryColor,
@@ -196,7 +200,8 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                                                 fontSize: 18.0,
                                               )));
                                     }).toList(),
-                                    style: const TextStyle(fontSize: 18.0),
+                                    style: const TextStyle(
+                                        fontSize: 18.0, color: Colors.white),
                                     decoration: InputDecoration(
                                         labelText: 'Priority',
                                         labelStyle:
@@ -232,8 +237,8 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                               ),
                               widget.note != null
                                   ? Container(
-                                      margin:
-                                          EdgeInsets.symmetric(vertical: 20.0),
+                                      margin: const EdgeInsets.symmetric(
+                                          vertical: 20.0),
                                       height: 60.0,
                                       width: double.infinity,
                                       decoration: BoxDecoration(
